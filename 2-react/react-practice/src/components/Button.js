@@ -3,6 +3,13 @@ import PropTypes from 'prop-types'
 import './Button.css'
 
 class Button extends Component {
+  static propTypes = {
+    text: PropTypes.string.isRequired,
+  }
+  static defaultProps = {
+    text: 'This is the default text'
+  }
+
   shouldComponentUpdate(newProps) {
     return false 
   }
@@ -20,18 +27,5 @@ class Button extends Component {
     )
   }
 }
-
-  /*
-const Button = props => (
-)
-
-Button.propTypes = {
-  text: PropTypes.string.isRequired,
-}
-
-Button.defaultProps = {
-  text: 'This is the default text'
-}
-*/
 
 export default Button
