@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Button from './components/Button'
+import ListOfButtons from './components/ListOfButtons'
 
 class App extends Component {
   constructor(props) {
@@ -24,6 +25,7 @@ class App extends Component {
         <div>{this.state.count}</div>
         <div>{this.state.secondaryCount}</div>
         <Button onClick={this.updateCount} text={this.state.count} idc={this.state.secondaryCount} />
+        <ListOfButtons increment={this.updateCount} />
     </div>
     );
   }

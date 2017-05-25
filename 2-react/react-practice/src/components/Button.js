@@ -21,7 +21,7 @@ class Button extends Component {
 
   render() {
     return (
-      <div className='button' onClick={this.logPersist} style={{display: 'inline-block'}}>
+      <div className='button' onClick={this.props.onClick} style={{display: 'inline-block'}}>
         {this.props.text}
       </div>
     )
